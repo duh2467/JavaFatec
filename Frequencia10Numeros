@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ValorMaisFrequente {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int tamanhoArray = 10;
+
+        int[] numeros = new int[tamanhoArray];
+
+        for (int i = 0; i < tamanhoArray; i++) {
+            System.out.print("Digite o numero " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+        }
+
+        Map<Integer, Integer> frequencias = new HashMap<>();
+
+        for (int numero : numeros) {
+            if (frequencias.containsKey(numero)) {
+                frequencias.put(numero, frequencias.get(numero) + 1);
+            } else {
+                frequencias.put(numero, 1);
+            }
+        }
+
+        int valorMaisFrequente = 0;
+        int frequenciaMaisFrequente = 0;
+
+        for (Map.Entry<Integer, Integer> entry : frequencias.entrySet()) {
+            int numero = entry.getKey();
+            int frequencia = entry.getValue();
+
+            if (frequencia > frequenciaMaisFrequente) {
+                valorMaisFrequente = numero;
+                frequenciaMaisFrequente = frequencia;
+            }
+        }
+
+        System.out.println("O valor mais frequente e " + valorMaisFrequente + " e aparece " + frequenciaMaisFrequente + " vezes.");
+
+        scanner.close();
+    }
+}
