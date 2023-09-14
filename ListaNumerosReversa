@@ -1,0 +1,23 @@
+import java.util.Random;
+
+public class ReversaoDeArray {
+    public static void main(String[] args) {
+
+        int tamanhoArray = 10;
+
+        int[] numeros = new int[tamanhoArray];
+
+        Random random = new Random();
+
+        System.out.println("Lista de numeros original:");
+        for (int i = 0; i < tamanhoArray; i++) {
+            numeros[i] = random.nextInt(100);
+            System.out.print(numeros[i] + " "); 
+        }
+
+        System.out.println("\nLista de numeros em ordem reversa:");
+        for (int i = tamanhoArray - 1; i >= 0; i--) {
+            System.out.print(numeros[i] + " "); 
+        }
+    }
+}
