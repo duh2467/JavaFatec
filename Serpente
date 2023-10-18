@@ -1,0 +1,53 @@
+public class Serpente {
+
+    private String nome;
+    private double comprimento;
+    private boolean venenosa;
+    private String familia;
+
+    public Serpente(String nome, double comprimento, boolean venenosa, String familia) {
+        this.nome = nome;
+        this.comprimento = comprimento;
+        this.venenosa = venenosa;
+        this.familia = familia;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Comprimento: " + comprimento + " metros");
+        System.out.println("Venenosa: " + (venenosa ? "Sim" : "Não"));
+        System.out.println("Família: " + familia);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getComprimento() {
+        return comprimento;
+    }
+
+    public void setComprimento(double comprimento) {
+        this.comprimento = comprimento;
+    }
+
+    public boolean isVenenosa() {
+        return venenosa;
+    }
+
+    public void setVenenosa(boolean venenosa) {
+        this.venenosa = venenosa;
+    }
+
+    public String getFamilia() {
+        return familia;
+    }
+
+    public void setFamilia(String familia) {
+        this.familia = familia;
+    }
+}
