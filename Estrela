@@ -1,0 +1,53 @@
+public class Estrela {
+
+    private String nome;
+    private String tipo;
+    private double temperatura;
+    private double tamanho;
+
+    public Estrela(String nome, String tipo, double temperatura, double tamanho) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.temperatura = temperatura;
+        this.tamanho = tamanho;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Temperatura: " + temperatura + " K (Kelvin)");
+        System.out.println("Tamanho: " + tamanho + " vezes o tamanho do Sol");
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public double getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    public double getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(double tamanho) {
+        this.tamanho = tamanho;
+    }
+}
