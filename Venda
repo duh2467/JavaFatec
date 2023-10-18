@@ -1,0 +1,52 @@
+public class Venda {
+
+    private int numeroVenda;
+    private String cliente;
+    private Date data;
+    private double valorTotal;
+    private boolean finalizada;
+
+    public Venda(int numeroVenda, String cliente) {
+        this.numeroVenda = numeroVenda;
+        this.cliente = cliente;
+        this.data = new Date(); 
+        this.valorTotal = 0.0; 
+        this.finalizada = false; 
+    }
+
+    public void adicionarItem(String descricao, double preco) {
+        if (!finalizada) {
+        } else {
+            System.out.println("A venda já foi finalizada. Não é possível adicionar mais itens.");
+        }
+    }
+
+    public void finalizarVenda() {
+        if (!finalizada) {
+            finalizada = true;
+            System.out.println("Venda finalizada com sucesso.");
+        } else {
+            System.out.println("A venda já foi finalizada anteriormente.");
+        }
+    }
+
+    public int getNumeroVenda() {
+        return numeroVenda;
+    }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public boolean isFinalizada() {
+        return finalizada;
+    }
+}
