@@ -1,0 +1,61 @@
+public class Dentista {
+
+    private String nome;
+    private String especializacao;
+    private String numeroRegistro;
+    private int anosExperiencia;
+
+    public Dentista(String nome, String especializacao, String numeroRegistro, int anosExperiencia) {
+        this.nome = nome;
+        this.especializacao = especializacao;
+        this.numeroRegistro = numeroRegistro;
+        this.anosExperiencia = anosExperiencia;
+    }
+
+    public void realizarAtendimento() {
+        System.out.println(nome + " está realizando atendimento odontológico.");
+    }
+
+    public void prescreverTratamento(String paciente) {
+        System.out.println(nome + " está prescrevendo um tratamento para o paciente " + paciente);
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Especialização: " + especializacao);
+        System.out.println("Número de Registro: " + numeroRegistro);
+        System.out.println("Anos de Experiência: " + anosExperiencia);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEspecializacao() {
+        return especializacao;
+    }
+
+    public void setEspecializacao(String especializacao) {
+        this.especializacao = especializacao;
+    }
+
+    public String getNumeroRegistro() {
+        return numeroRegistro;
+    }
+
+    public void setNumeroRegistro(String numeroRegistro) {
+        this.numeroRegistro = numeroRegistro;
+    }
+
+    public int getAnosExperiencia() {
+        return anosExperiencia;
+    }
+
+    public void setAnosExperiencia(int anosExperiencia) {
+        this.anosExperiencia = anosExperiencia;
+    }
+}
