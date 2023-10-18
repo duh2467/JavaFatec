@@ -1,0 +1,42 @@
+public class Exportacao {
+
+    private String paisDestino;
+    private String produtosExportados;
+    private Date dataEnvio;
+
+    public Exportacao(String paisDestino, String produtosExportados, Date dataEnvio) {
+        this.paisDestino = paisDestino;
+        this.produtosExportados = produtosExportados;
+        this.dataEnvio = dataEnvio;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("País de Destino: " + paisDestino);
+        System.out.println("Produtos Exportados: " + produtosExportados);
+        System.out.println("Data de Envio: " + dataEnvio);
+    }
+
+    public String getPaisDestino() {
+        return paisDestino;
+    }
+
+    public void setPaisDestino(String paisDestino) {
+        this.paisDestino = paisDestino;
+    }
+
+    public String getProdutosExportados() {
+        return produtosExportados;
+    }
+
+    public void setProdutosExportados(String produtosExportados) {
+        this.produtosExportados = produtosExportados;
+    }
+
+    public Date getDataEnvio() {
+        return dataEnvio;
+    }
+
+    public void setDataEnvio(Date dataEnvio) {
+        this.dataEnvio = dataEnvio;
+    }
+}
