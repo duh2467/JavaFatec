@@ -1,0 +1,56 @@
+public class Onibus {
+
+    private String numeroIdentificacao;
+    private int capacidadePassageiros;
+    private String destino;
+    private double velocidadeAtual;
+
+    public Onibus(String numeroIdentificacao, int capacidadePassageiros, String destino) {
+        this.numeroIdentificacao = numeroIdentificacao;
+        this.capacidadePassageiros = capacidadePassageiros;
+        this.destino = destino;
+        this.velocidadeAtual = 0.0;
+    }
+
+    public void partir() {
+        System.out.println("Ônibus partindo para " + destino);
+    }
+
+    public void aumentarVelocidade(double aumento) {
+        velocidadeAtual += aumento;
+        System.out.println("Velocidade atual: " + velocidadeAtual + " km/h");
+    }
+
+    public void diminuirVelocidade(double diminuicao) {
+        velocidadeAtual -= diminuicao;
+        System.out.println("Velocidade atual: " + velocidadeAtual + " km/h");
+    }
+
+    public void parar() {
+        velocidadeAtual = 0.0;
+        System.out.println("Ônibus parado.");
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Número de Identificação: " + numeroIdentificacao);
+        System.out.println("Capacidade de Passageiros: " + capacidadePassageiros);
+        System.out.println("Destino: " + destino);
+        System.out.println("Velocidade Atual: " + velocidadeAtual + " km/h");
+    }
+
+    public String getNumeroIdentificacao() {
+        return numeroIdentificacao;
+    }
+
+    public int getCapacidadePassageiros() {
+        return capacidadePassageiros;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public double getVelocidadeAtual() {
+        return velocidadeAtual;
+    }
+}
