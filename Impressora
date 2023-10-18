@@ -1,0 +1,61 @@
+
+public class Impressora {
+
+    private String modelo;
+    private boolean ligada;
+    private int quantidadePapel;
+
+    public Impressora(String modelo) {
+        this.modelo = modelo;
+        this.ligada = false;
+        this.quantidadePapel = 0;
+    }
+
+    public void ligar() {
+        if (!ligada) {
+            ligada = true;
+            System.out.println("A impressora está ligada.");
+        } else {
+            System.out.println("A impressora já está ligada.");
+        }
+    }
+
+    public void desligar() {
+        if (ligada) {
+            ligada = false;
+            System.out.println("A impressora está desligada.");
+        } else {
+            System.out.println("A impressora já está desligada.");
+        }
+    }
+
+    public void carregarPapel(int quantidade) {
+        quantidadePapel += quantidade;
+        System.out.println("Carregados " + quantidade + " folhas de papel. Total: " + quantidadePapel + " folhas.");
+    }
+
+    public void imprimir(String documento) {
+        if (ligada && quantidadePapel > 0) {
+            System.out.println("Imprimindo documento: " + documento);
+            quantidadePapel--;
+        } else {
+            System.out.println("A impressora não está ligada ou não há papel disponível.");
+        }
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public boolean isLigada() {
+        return ligada;
+    }
+
+    public int getQuantidadePapel() {
+        return quantidadePapel;
+    }
+}
