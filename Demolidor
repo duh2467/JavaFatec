@@ -1,0 +1,53 @@
+public class Demolidor {
+
+    private String nome;
+    private String habilidades;
+    private String identidadeSecreta;
+    private String descricao;
+
+    public Demolidor(String nome, String habilidades, String identidadeSecreta, String descricao) {
+        this.nome = nome;
+        this.habilidades = habilidades;
+        this.identidadeSecreta = identidadeSecreta;
+        this.descricao = descricao;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Habilidades: " + habilidades);
+        System.out.println("Identidade Secreta: " + identidadeSecreta);
+        System.out.println("Descrição: " + descricao);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getHabilidades() {
+        return habilidades;
+    }
+
+    public void setHabilidades(String habilidades) {
+        this.habilidades = habilidades;
+    }
+
+    public String getIdentidadeSecreta() {
+        return identidadeSecreta;
+    }
+
+    public void setIdentidadeSecreta(String identidadeSecreta) {
+        this.identidadeSecreta = identidadeSecreta;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+}
