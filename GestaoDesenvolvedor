@@ -1,0 +1,20 @@
+public class Desenvolvedor extends Funcionario {
+    public Desenvolvedor(String nome, double salario) {
+        super(nome, salario);
+    }
+
+    @Override
+    public void apagarTabela() {
+        System.out.println("Desenvolvedor " + getNome() + " apagou a tabela.");
+    }
+
+    @Override
+    public void subirParaProducao() {
+        System.out.println("Desenvolvedor " + getNome() + " subiu para producao.");
+    }
+
+    @Override
+    public void desenvolverTelas() {
+        System.out.println("Desenvolvedor " + getNome() + " desenvolveu as telas.");
+    }
+}
