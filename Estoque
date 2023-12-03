@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Estoque {
+    public static void main(String[] args) {
+        ArrayList<Produto> produtos = new ArrayList<>();
+        produtos.add(new Eletronico("Televisao", 2000.0));
+        produtos.add(new Roupa("Camiseta", 50.0));
+
+        for (Produto produto : produtos) {
+            System.out.println("Nome: " + produto.getNome());
+            System.out.println("Preco: " + produto.getPreco());
+            produto.ligar();
+            produto.conectarWifi();
+            System.out.println();
+        }
+    }
+}
