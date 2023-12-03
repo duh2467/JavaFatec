@@ -1,0 +1,15 @@
+public class Caminhao extends Veiculo {
+    public Caminhao(String marca, String modelo) {
+        super(marca, modelo);
+    }
+
+    @Override
+    public void acelerar() {
+        System.out.println("Caminhao " + getMarca() + " " + getModelo() + " acelerando.");
+    }
+
+    @Override
+    public void frear() {
+        System.out.println("Caminhao " + getMarca() + " " + getModelo() + " freando.");
+    }
+}
