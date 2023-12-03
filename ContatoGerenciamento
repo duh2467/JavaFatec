@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class GerenciamentoContatos {
+    public static void main(String[] args) {
+        ArrayList<Contato> contatos = new ArrayList<>();
+        contatos.add(new ContatoPessoal("Joao", "123456789", "Rua das Flores, 123"));
+        contatos.add(new ContatoProfissional("Maria", "987654321", "Tech Solutions"));
+
+        for (Contato contato : contatos) {
+            contato.exibirDetalhes();
+        }
+    }
+}
