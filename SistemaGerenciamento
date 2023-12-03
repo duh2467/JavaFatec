@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class GerenciamentoVeiculos {
+    public static void main(String[] args) {
+        ArrayList<Veiculo> veiculos = new ArrayList<>();
+        veiculos.add(new Carro("Ford", "Mustang"));
+        veiculos.add(new Moto("Honda", "CBR 1000RR"));
+        veiculos.add(new Caminhao("Volvo", "FH16"));
+
+        for (Veiculo veiculo : veiculos) {
+            System.out.println("Marca: " + veiculo.getMarca());
+            System.out.println("Modelo: " + veiculo.getModelo());
+            veiculo.acelerar();
+            veiculo.frear();
+            System.out.println();
+        }
+    }
+}
