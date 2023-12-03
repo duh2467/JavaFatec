@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class CalculadoraNumeros {
+    public static double calcularMedia(ArrayList<Integer> numeros) {
+        int soma = 0;
+        for (int numero : numeros) {
+            soma += numero;
+        }
+        return (double) soma / numeros.size();
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> numeros = new ArrayList<>();
+     
+        numeros.add(10);
+        numeros.add(20);
+        numeros.add(30);
+        numeros.add(40);
+        numeros.add(50);
+
+        try {
+            double media = calcularMedia(numeros);
+            System.out.println("A media e: " + media);
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro ao calcular a media: " + e.getMessage());
+        }
+    }
+}
