@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class Empresa {
+    public static void main(String[] args) {
+        ArrayList<Funcionario> funcionarios = new ArrayList<>();
+        funcionarios.add(new Gerente("Joao", 5000.0));
+        funcionarios.add(new Desenvolvedor("Maria", 3000.0));
+
+        for (Funcionario funcionario : funcionarios) {
+            System.out.println("Nome: " + funcionario.getNome());
+            System.out.println("Salario: " + funcionario.getSalario());
+            funcionario.apagarTabela();
+            funcionario.subirParaProducao();
+            funcionario.desenvolverTelas();
+            System.out.println();
+        }
+    }
+}
