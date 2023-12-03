@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class CadastroCliente {
+    private JFrame frame;
+    private JTextField nomeField, idadeField, sexoField, emailField, telefoneField, cpfField, dataNascField;
+    private JTextArea infoArea;
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    CadastroCliente window = new CadastroCliente();
+                    window.frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    public CadastroCliente() {
+        initialize();
+    }
+
+    private void initialize() {
+        frame = new JFrame();
+        frame.setBounds(100, 100, 450, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setLayout(null);
+
+        nomeField = new JTextField();
+        nomeField.setBounds(10, 11, 86, 20);
+        frame.getContentPane().add(nomeField);
+        nomeField.setColumns(10);
+
+        JButton btnSalvar = new JButton("Salvar");
+        btnSalvar.addActionListener(arg0 -> {
+            String info = "Nome: " + nomeField.getText() + "\n";
+ 
+            infoArea.setText(info);
+        });
+        btnSalvar.setBounds(335, 227, 89, 23);
+        frame.getContentPane().add(btnSalvar);
+
+        infoArea = new JTextArea();
+        infoArea.setBounds(10, 227, 315, 70);
+        frame.getContentPane().add(infoArea);
+    }
+}
