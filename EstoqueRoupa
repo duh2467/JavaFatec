@@ -1,0 +1,15 @@
+public class Roupa extends Produto {
+    public Roupa(String nome, double preco) {
+        super(nome, preco);
+    }
+
+    @Override
+    public void ligar() {
+        System.out.println("Roupa " + getNome() + " nao pode ser ligada.");
+    }
+
+    @Override
+    public void conectarWifi() {
+        System.out.println("Roupa " + getNome() + " nao pode se conectar ao Wi-Fi.");
+    }
+}
